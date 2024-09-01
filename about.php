@@ -35,8 +35,8 @@ include 'include/version.php';
             </div>
             <div class="about-content">
                 <h2>About Us</h2>
-                <h3>Your Gateway to Academic Success</h3>
-                <p>Our portal is designed to provide students, educators, and researchers with the best academic resources available. We believe in the power of knowledge and are committed to making it accessible to everyone. Join us in our mission to make learning a lifelong journey.</p>
+                <h3>Your Hub for Academic Resources and Events</h3>
+                <p>At the Academic Resource Portal, we’re dedicated to empowering students, educators, and researchers with top-quality academic materials and opportunities. Our platform not only provides access to essential resources like textbooks, notes, and exam questions but now also connects you to enriching academic events such as workshops, webinars, and hackathons. We believe in the power of knowledge and the importance of continuous learning. Join us as we make education a dynamic, lifelong journey.</p>
             </div>
         </div>
 
