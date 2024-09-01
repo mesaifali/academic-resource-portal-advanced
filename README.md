@@ -18,7 +18,7 @@ User usecase:
 
 
 Admin usecase:
--admin can see overall info in main dashboard with piechart
+- admin can see overall info in main dashboard with piechart
 - admin can approve/decline the resource that user want to post
 - admin can manage resource like edit and delete.
 - admin can manage user like edit info of user or delete account
@@ -28,5 +28,6 @@ Admin usecase:
 - amdin can see total registerd user in events
 
 in future update....
--like community forum
--and many more
+- like community forum
+- and many more
+  
