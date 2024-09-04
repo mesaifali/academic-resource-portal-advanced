@@ -1,22 +1,33 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../signin.php");
+    exit();
+}
 include '../includes/db.php';
 include '../includes/functions.php';
 include '../includes/version.php';
 
 // Initialize resource data
 $resource_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$user_id = $_SESSION['user_id'];
 $resource = null;
 
 if ($resource_id > 0) {
-    $sql = "SELECT * FROM resources WHERE id = $resource_id";
-    $result = $conn->query($sql);
+    // Use prepared statement to prevent SQL injection
+    $sql = "SELECT * FROM resources WHERE id = ? AND user_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ii", $resource_id, $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
     
     if ($result->num_rows > 0) {
         $resource = $result->fetch_assoc();
     } else {
-        echo 'Resource not found.';
+        header("Location: ../error.php?message=" . urlencode("Resource not found or you don't have permission to edit it."));
         exit;
     }
+    $stmt->close();
 }
 
 // Handle form submission
@@ -25,28 +36,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = htmlspecialchars($_POST['title']);
     $description = htmlspecialchars($_POST['description']);
     $type = htmlspecialchars($_POST['type']);
-    $file_path = htmlspecialchars($_POST['file_path']); // assuming the file_path is not changed
-    $thumbnail = htmlspecialchars($_POST['thumbnail']); // assuming the thumbnail is not changed
 
     // Update resource in the database
-    $sql = "UPDATE resources SET title='$title', description='$description', type='$type' WHERE id=$resource_id";
+    $sql = "UPDATE resources SET title = ?, description = ?, type = ? WHERE id = ? AND user_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssii", $title, $description, $type, $resource_id, $user_id);
     
-    if ($conn->query($sql) === TRUE) {
-        echo 'Resource updated successfully.';
+    if ($stmt->execute()) {
+        $success_message = "Resource updated successfully.";
     } else {
-        echo 'Error updating resource: ' . $conn->error;
+        $error_message = "Error updating resource: " . $conn->error;
     }
-    $conn->close();
+    $stmt->close();
 }
-?>
 
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css?v=<?php echo $version; ?>">
-        <link rel="stylesheet" href="../assets/user_sidebar/sidebar.css?v=<?php echo $version; ?>">
+    <link rel="stylesheet" href="../assets/user_sidebar/sidebar.css?v=<?php echo $version; ?>">
     <title>Edit Resource - Academic Resource Portal</title>
 </head>
 <body>
@@ -54,7 +66,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <main>
         <section class="edit-container">
             <h2>Edit Resource</h2>
-            <?php if ($resource) { ?>
+            <?php 
+            if (isset($success_message)) {
+                echo "<p class='success'>$success_message</p>";
+            }
+            if (isset($error_message)) {
+                echo "<p class='error'>$error_message</p>";
+            }
+            if ($resource) { 
+            ?>
                 <form action="edit-resource.php?id=<?php echo $resource_id; ?>" method="POST">
                     <div class="form-group">
                         <label for="title">Title:</label>
@@ -65,7 +85,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="description">Description:</label>
                         <textarea id="description" name="description" rows="5" required><?php echo htmlspecialchars($resource['description']); ?></textarea>
                     </div>
-
                     <div class="form-group">
                         <label for="type">Type:</label>
                         <select id="type" name="type" required>
@@ -74,17 +93,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <option value="question" <?php echo $resource['type'] == 'question' ? 'selected' : ''; ?>>Question</option>
                         </select>
                     </div>
-
-                    <!-- Assuming file_path and thumbnail fields are not editable in this example 
-                    <input type="hidden" name="file_path" value="<?php echo htmlspecialchars($resource['file_path']); ?>">
-                    <input type="hidden" name="thumbnail" value="<?php echo htmlspecialchars($resource['thumbnail']); ?>">-->
                     <button type="submit" class="dash-btn">Update Resource</button>
                 </form>
             <?php } else { ?>
-                <p>Resource not found.</p>
+                <p>Resource not found or you don't have permission to edit it.</p>
             <?php } ?>
         </section>
     </main>
-        <script src="../assets/user_sidebar/sidebar.js"></script>
+    <script src="../assets/user_sidebar/sidebar.js"></script>
 </body>
 </html>
