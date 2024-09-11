@@ -66,7 +66,7 @@ $conn->close();
                 </div>
                 <div class="sign-group">
                     <label for="profile_picture">Profile Picture:</label>
-                    <input type="file" name="profile_picture" id="profile_picture" required>
+                    <input type="image" name="profile_picture" id="profile_picture" required>
                 </div>
                 <div class="sign-group">
                     <label for="password">Password:</label>

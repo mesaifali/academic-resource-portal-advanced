@@ -74,7 +74,7 @@ $conn->close();
             </div>
             <div class="form-group">
                 <label for="thumbnail">Upload Thumbnail</label>
-                <input type="file" id="thumbnail" name="thumbnail" required>
+                <input type="image" id="thumbnail" name="thumbnail" required>
             </div>
             <button type="submit" class="dash-btn">Submit</button>
         </form>

@@ -364,6 +364,7 @@ button:disabled, .button:disabled {
 .form-group input[type="date"],
 .form-group input[type="number"],
 .form-group input[type="url"],
+.form-group input[type="image"],
 .form-group input[type="file"] 
 {
     background-color: var(--form-bg);
@@ -1091,6 +1092,7 @@ margin-top:40px ;
 .sign-group select,
 .sign-group input[type="email"],
 .sign-group input[type="password"],
+.sign-group input[type="image"],
 .sign-group input[type="file"] {
     width: 100%;
     padding: 10px;

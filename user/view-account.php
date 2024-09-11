@@ -77,7 +77,7 @@ $conn->close();
             <h3>Update Profile Picture</h3>
             <div class="form-group">
                 <label for="profile_picture">Choose New Picture</label>
-                <input type="file" id="profile_picture" name="profile_picture" required>
+                <input type="image" id="profile_picture" name="profile_picture" required>
             </div>
             <button type="submit" name="update_profile_picture" class="dash-btn">Update Profile Picture</button>
         </form>
