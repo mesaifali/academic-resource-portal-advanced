@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <div class="form-group">
                         <label for="thumbnail">Thumbnail:</label>
-                        <input type="image" id="thumbnail" name="thumbnail" accept="image/*">
+                        <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
                         <p>Current thumbnail: <?php echo htmlspecialchars($resource['thumbnail']); ?></p>
                     </div>
 
