@@ -52,18 +52,19 @@ $admin = $result->fetch_assoc();
                 </a>
             </li>
             <div class="dropdown-content-dash">
-                <li class="menu-item dropdown-item-dash">
-                    <a href="../admin/manage-resources.php" class="menu-link">
-                    <span class="icon"><i class="ri-folders-line"></i></span>
-                        <span class="text">Manage Resources</span>
-                    </a>
-                </li>
-
-                <li class="menu-item">
+                
+          <li class="menu-item">
                 <a href="../admin/approve-decline.php" class="menu-link">
                     <span class="icon"><i class="ri-donut-chart-line"></i></span>
                     <span class="text">Approve/Decline</span>
                 </a>
+                </li>
+
+          <li class="menu-item dropdown-item-dash">
+                    <a href="../admin/manage-resources.php" class="menu-link">
+                    <span class="icon"><i class="ri-folders-line"></i></span>
+                        <span class="text">Manage Resources</span>
+                    </a>
                 </li>
             
           <li class="menu-item dropdown-item">
