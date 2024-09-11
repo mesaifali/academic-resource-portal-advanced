@@ -45,15 +45,38 @@ $admin = $result->fetch_assoc();
                 </a>
             </li>
             <li class="menu-item">
-                <a href="../admin/manage-resources.php" class="menu-link">
-                    <span class="icon"><i class="ri-folders-line"></i></span>
+                <a href="#" class="menu-link dropdown-toggle">
+                    <span class="icon"><i class="ri-drag-move-line"></i></i></span>
                     <span class="text">Resources</span>
+                    <i class="fa-solid fa-chevron-down dropdown-icon" style="padding-left:10px;"></i>
                 </a>
             </li>
-            <li class="menu-item">
+            <div class="dropdown-content-dash">
+                <li class="menu-item dropdown-item-dash">
+                    <a href="../admin/manage-resources.php" class="menu-link">
+                    <span class="icon"><i class="ri-folders-line"></i></span>
+                        <span class="text">Manage Resources</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
                 <a href="../admin/approve-decline.php" class="menu-link">
                     <span class="icon"><i class="ri-donut-chart-line"></i></span>
                     <span class="text">Approve/Decline</span>
+                </a>
+                </li>
+            
+          <li class="menu-item dropdown-item">
+                    <a href="../admin/course-dashboard.php" class="menu-link">
+                         <span class="icon"><i class="ri-folder-video-line"></i></span>
+                        <span class="text">Courses</span>
+                    </a>
+                </li>
+            </div>
+                   <li class="menu-item">
+                <a href="../admin/result-dashboard.php" class="menu-link">
+                    <span class="icon"><i class="ri-file-copy-2-line"></i></span>
+                    <span class="text">Results</span>
                 </a>
             </li>
 
@@ -63,14 +86,14 @@ $admin = $result->fetch_assoc();
                     <span class="text">Events</span>
                 </a>
             </li>
- <!--   <li class="menu-item">
-                <a href="../index.php" class="menu-link">
-                    <span class="icon"><i class="iconoir-home-simple"></i></span>
-                    <span class="text">Back To Home</span>
+
+              <li class="menu-item">
+                <a href="../admin/discussion-dashboard.php" class="menu-link">
+                    <span class="icon"><i class="ri-message-3-line"></i></span>
+                    <span class="text">Chats</span>
                 </a>
-            </li> -->
-
-
+            </li>
+            
         </ul>
 
         <div class="profile menu-item">
@@ -88,7 +111,6 @@ $admin = $result->fetch_assoc();
             </a>
         </div> 
     </div>
-    <script src="../assets/user_sidebar/sidebar.js"></script>
+   <script src="../assets/user_sidebar/sidebar.js"></script>
 </body>
-
 </html>

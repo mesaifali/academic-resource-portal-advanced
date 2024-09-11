@@ -25,8 +25,10 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-github"></i>
+            
           </div>
           </ul>
+          
         </div>
 
         <div class="footer-col">
@@ -38,7 +40,7 @@
           </ul>
         </div>
 
-
+ <!--
  <div class="footer-col">
           <h4>Events</h4>
           <ul class="links">
@@ -57,13 +59,44 @@
           </ul>
         </div>
 
+
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul class="links">
+            <li><a href="http://noteshare.free.nf/courses.php?search=&filter=1">Coding</a></li>
+            <li><a href="http://noteshare.free.nf/courses.php?search=&filter=2">AI</a></li>
+            <li><a href="http://noteshare.free.nf/courses.php?search=&filter=3">Design</a></li>
+          </ul>
+        </div> -->
+
+        <div class="footer-col">
+          <h4>I Care</h4>
+          <ul class="links">
+          <li><a href="../results.php">Result</a></li>
+            <li><a href="../discussion-forum.php">Discussion Forum</a></li> -->
+          <!-- <li><a href="../privacy-policy.php">Privacy Policy</a></li> -->
+          </ul>
+        </div>
+
         <div class="footer-col">
           <h4>Legal</h4>
           <ul class="links">
             <li><a href="../terms-conditon.php">Terms and Condtions</a></li>
             <li><a href="../privacy-policy.php">Privacy Policy</a></li>
+             <li><a href="../dmca.php">DMCA</a></li>
           </ul>
         </div>
+
+  <div class="footer-col">
+          <h4>Tools</h4>
+          <ul class="links">
+            <li><a href="">tool1</a></li>
+            <li><a href="">tool2</a></li>
+             <li><a href="">tool3</a></li>
+          </ul>
+        </div>
+
+
 
       <!--  <div class="footer-col">
           <h4>Newsletter</h4>

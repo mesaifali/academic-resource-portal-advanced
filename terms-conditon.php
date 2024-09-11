@@ -61,6 +61,7 @@ include 'includes/version.php';
     <h2 class="policy-terms">11. Contact Information</h2>
     <p>If you have any questions about these Terms and Conditions, please contact us at legal@academicresourceportal.com.</p>
 </main>
+
     <footer>
         <?php include 'includes/footer.php'; ?>
     </footer>

@@ -42,6 +42,8 @@ header {
     /* background-color: #353a48; */
     color:  var(--color-white);
     box-shadow: 0 4px 8px var(--shadow-color);
+    z-index: 999;
+    position: relative;
     }
 
 .navbar {
@@ -227,6 +229,7 @@ width: 1000px;
     text-decoration: none;
     color: var(--color-blue);
         font-weight: bold;
+        padding-left: 16px;
 }
 
 /* Table Styles */
@@ -358,8 +361,9 @@ button:disabled, .button:disabled {
 .form-group select,
 .form-group input[type="email"],
 .form-group input[type="password"],
-        .form-group input[type="date"],
-        .form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group input[type="url"],
 .form-group input[type="file"] 
 {
     background-color: var(--form-bg);
@@ -665,7 +669,8 @@ margin-top:40px ;
     color: var(--color-dark-blue);}
 
 .resource-type {
-    color: var(--color-dark-gray);    font-weight: bold;
+    color: var(--color-dark-gray);    
+    font-weight: initial;
 }
 
 .download-btn {
@@ -756,6 +761,7 @@ margin-top:40px ;
             display: flex;
             justify-content: center;
             margin: 20px 0;
+            flex-wrap: wrap;
         }
         .chip {
             display: inline-block;
@@ -787,7 +793,7 @@ margin-top:40px ;
 .footer .footer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 3.5rem;
   padding: 60px;
 }
@@ -1141,7 +1147,7 @@ button.button, .sign-container a.button {
 }
 
 .dash-btn {
-    width: 96%;
+    width: 98%;
     padding: 16px;
     background-color: var(--color-blue);
     color: var(--color-white);
@@ -1297,6 +1303,7 @@ margin: 4px 0px 4px 0px;
             margin-top: 25px; /* Added top margin to the button */
             display: inline-block;
             font-size: 1.1em;
+            text-align: center;
         }
         .container {
             display: flex;
@@ -1316,7 +1323,12 @@ margin: 4px 0px 4px 0px;
             height: 575px;
             border-radius: 10px;
         }
-
+   .container-result {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
         /* Media Queries for Responsiveness */
         @media (max-width: 1024px) {
             .content-heading {
@@ -1331,6 +1343,12 @@ margin: 4px 0px 4px 0px;
         @media (max-width: 768px) {
             .container {
                 flex-direction: column-reverse;
+            }
+             .container-result {
+                flex-direction: column;
+            }
+            .result-select{
+                height: 40px;
             }
             .left-content {
                 padding-left: 0;
@@ -1687,11 +1705,12 @@ display: flex;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding-top:30px;
         }
         .event-meta-list9 {
             list-style: none;
             padding: 0;
-            margin-bottom: 30px;
+            /* margin-bottom: 30px; */
         }
         .event-meta-item6 {
             display: flex;
@@ -1933,3 +1952,491 @@ margin-bottom: 10px;
             font-size: 24px;
             color: #333;
         }
+       fieldset {
+            border: none;
+            padding: 0;
+            margin: 0 0 20px 0; 
+        }
+
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px; 
+        }
+    #chapter-list li { 
+        margin: 0 3px 3px 3px; 
+        padding: 0.4em; 
+        padding-left: 1.5em; 
+        font-size: 1.4em; 
+        height: 50px; 
+        cursor: move;
+        background-color: #292d32;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        color:white;
+    }
+    #chapter-list li span.ui-icon { 
+        position: absolute; 
+        margin-left: -1.3em; 
+    }
+    #chapter-list li.ui-sortable-helper {
+        background-color: #e0e0e0;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    .chapter-title {
+        flex-grow: 1;
+    }
+    .edit-chapter-btn{
+        margin-left: 10px;
+        padding: 2px 8px;
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 0.7em;
+        border: none;
+        cursor: pointer;
+           background-color: #4CAF50;
+    }
+.edit-chapter-btn:hover {
+        background-color: #45a049;
+    }
+    .delete-chapter-btn {
+        margin-left: 10px;
+        padding: 10px 10px;
+        color: white;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 0.7em;
+        border: none;
+        cursor: pointer;
+             background-color: #f44336;
+    }
+    
+    .delete-chapter-btn:hover {
+        background-color: #d32f2f;
+    }
+/* course dashboard */
+      .overview {
+            margin-bottom: 30px;
+        }
+        .course-main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+  .course-button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-top: 25px;
+        }
+
+    .course-dash-btn {
+    width: 50%;
+    padding: 16px;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    text-align:center;
+        }
+        
+        .course-dash-btn:hover {
+        background-color: var(--color-light-blue);
+        }
+        .recent-courses {
+            background-color: var(--color-background);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .recent-courses h3 {
+            margin-top: 0;
+            color: var(--color-text);
+        }
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* course container */
+        .user-course-container {
+width: 1000px;
+  margin: 20px 0px 20px 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px 8px 0px;
+ box-shadow: 0 4px 12px var(--header-shadow);
+/* height: 595px; */
+  height: 100%
+
+}
+
+.user-course-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.75em;
+    color: var(--color-white);
+    }
+.user-course-dash-btn{
+  width: 100%;
+  padding: 16px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .completion-status {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        .course-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #434446
+        }
+        .course-content {
+            padding: 15px;
+        }
+        .course-title {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+        .progress-bar-main {
+            background-color: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-num {
+            background-color: #4CAF50;
+            height: 100%;
+        }
+        /* high level .event-description */
+        .event-description8 h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.event-description8 ul, .event-description8 ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.event-description8 li {
+    margin-bottom: 5px;
+}
+
+.event-description8 p {
+    margin-bottom: 15px;
+}
+ /*course details page*/
+.course-content-wrapper2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            flex-direction: column
+        }
+
+
+
+   .course-image-wrapper2 {
+            flex: 1;
+            display: flex;
+  justify-content: center;
+        }
+        .course-thumbnail5 {
+            width: 1022px;
+            height: 672px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        
+
+@media (max-width: 768px) {
+ .course-thumbnail5 {
+        width: 300px;
+    height: 300px;
+    margin-top: 100px;
+  }
+        }
+
+
+
+        /* chapter design */
+        .course-video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.course-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+        .course-meta-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-meta-item {
+            margin-bottom: 10px;
+        }
+        .course-meta-icon {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .chapters-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .chapter-item {
+            background-color: var(--color-light-gray);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .course-chapter-title {
+            font-weight: bold;
+            color: var(--color-dark-blue);
+            text-decoration: none;
+        }
+        .completed-badge {
+            background-color: var(--color-green);
+            color: var(--color-white);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+    .download-assets-btn {
+    display: inline-block;
+   background-color: var(--color-green); 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-assets-btn:hover {
+    background-color: #45a049;
+}
+.result-note{
+  color: #7b7777;
+  text-align: center;
+  font-size: 12px;
+}
+.result-note-head{
+  text-align: center;
+}
+.admin-form{
+padding-top: 20px;
+}
+
+.result-content{
+    margin-left: 32px;
+  margin-top: 32px;
+  width: 76%;
+}
+
+/* chat-talk section */
+
+/* Chat Interface */
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Adjust based on the combined height of header and footer */
+    /* padding: 20px; */
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#chat-container {
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    /* background-color: var(--color-white);
+    box-shadow: 0 2px 10px var(--shadow-color); */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 0px 20px 20px 20px;
+    overflow-y: auto;
+    /* background-color: var(--color-light-gray); */
+    border: 1px solid var(--form-border);;
+  border-radius: 16px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;  /* Align items to the top to ensure avatar and text are aligned properly */
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    position: relative;
+}
+
+.message.sent {
+    background-color: var(--color-bright-blue);
+    margin-left: auto;
+    color: var(--color-white);
+    border-radius: 10px 0 10px 10px; /* Rounded corners with a flat edge on the left */
+    text-align: right;
+    flex-direction: row-reverse;  /* Avatar on the right */
+}
+
+.message.received {
+    background-color: #8ce3ae;
+    margin-right: auto;
+    border-radius: 0 10px 10px 10px; /* Rounded corners with a flat edge on the right */
+    color: var(--color-dark-gray);
+    text-align: left;
+}
+
+.avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message.sent .avatar {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 50px);
+}
+
+.message-content strong {
+    /* color: var(--color-medium-gray); */
+    font-size: 12px; /* Smaller font size for username */
+  font-weight: normal;
+}
+
+.message-content p {
+    margin: 5px 0 0 0;  /* Margin to provide space between username and message */
+    font-size: 24px;  /* Larger font size for message */
+    word-break: break-word;
+}
+
+.message-content .timestamp {
+    font-size: 0.7em;
+    /* color: var(--color-medium-gray); */
+    margin-top: 5px;
+    /* text-align: right; */
+}
+
+.message.sent .timestamp {
+    text-align: right;  /* Align timestamp to the left for sent messages */
+}
+
+#chat-input {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    background-color: #e8e6f0;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--form-border);
+    border-radius: 20px;
+    background-color: var(--color-light-gray);
+    margin-right: 10px;
+    outline: none;
+}
+
+#send-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: var(--color-bright-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: var(--color-light-blue);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    #chat-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    #chat-input {
+        max-width: 100%;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+}

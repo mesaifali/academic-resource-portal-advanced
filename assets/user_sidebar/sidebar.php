@@ -57,12 +57,21 @@ $user = $result->fetch_assoc();
                 </a>
             </li>
 
-            <li class="menu-item">
+          <li class="menu-item dropdown-item">
+                    <a href="../user/my_courses.php" class="menu-link">
+                         <span class="icon"><i class="ri-folder-video-line"></i></span>
+                        <span class="text">My Courses</span>
+                    </a>
+                </li>
+
+    <li class="menu-item">
                 <a href="../index.php" class="menu-link">
                     <span class="icon"><i class="iconoir-home-simple"></i></span>
                     <span class="text">Back To Home</span>
                 </a>
             </li>
+
+
         </ul>
 
         <div class="profile menu-item">

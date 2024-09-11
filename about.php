@@ -87,7 +87,7 @@ include 'include/version.php';
         <div class="faq-item" data-search="what is your return policy">
             <input type="checkbox" id="q1">
             <label class="faq-question" for="q1">What is the Academic Resource Portal?</label>
-            <p class="faq-answer">The Academic Resource Portal is an online platform where users can share and download a wide variety of academic resources, such as books, notes, and exam questions. Additionally, the portal now features an "Events" section, offering access to academic-related events like workshops, webinars, and hackathons.</p>
+            <p class="faq-answer">The Academic Resource Portal is an online platform where users can share and download a wide variety of academic resources, such as books, notes, and exam questions. Additionally, the portal now features an "Events" section, offering access to academic-related events like workshops, webinars, and hackathons.Now we have a new "Courses" section where users can enroll and watch educational videos.</p>
         </div>
 
         <div class="faq-item" data-search="how long does shipping take">
@@ -101,7 +101,7 @@ include 'include/version.php';
             <label class="faq-question" for="q3">How do I upload my own academic resources?</label>
             <p class="faq-answer">After logging in, click on "Upload Resource" in your dashboard, fill in the necessary details, and submit your material.</p>
         </div>
-        <a href="faq.php" class="btn-get-started" style="margin-left: 40%;">View more</a>
+        <a href="faq.php" class="btn-get-started">View more</a>
 
     </main>
     <footer>

@@ -13,7 +13,7 @@
         <?php include 'includes/header.php'; ?>
     </header>
     
-    <main style="padding: 20px 266px 266px 266px;">
+    <main style="display: flex;padding: 50px; justify-content: center; align-content: center;align-items: center; padding: 50px;">
         <section class="contact-container">
             <form action="https://formspree.io/f/xjkbaglg" method="POST">
                 <h2>Get in Touch</h2>

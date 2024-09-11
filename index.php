@@ -13,14 +13,84 @@ include 'includes/version.php';
 
     <title>Academic Resource Portal</title>
     <script src="//code.tidio.co/lnyjageljxyuxvgexte5odsbsuzoajyx.js" async></script>
+
+   <style>
+        /* body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        } */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--color-gray);
+        }
+        .tag {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .hero-h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+            max-width: 800px;
+        }
+        .hero-p {
+            
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .home-cta-button {
+            position: relative;
+            display: inline-block;
+            padding: 2px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            color: black;
+        }
+        .home-cta-button span {
+            display: block;
+            padding: 13px 28px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 28px;
+            transition: all 0.3s ease;
+        }
+        .home-cta-button::before {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .home-cta-button:hover::before {
+            opacity: 1;
+            filter: blur(5px);
+         
+        }
+        .home-cta-button:hover span {
+            background-color: rgba(0, 0, 0, 0.8);
+    
+        }
+    </style>
+
 </head>
 <body>
     <header>
      <?php include 'includes/header.php'; ?>
     </header>
-    <main>
+    <!-- <main>
         <div class="container">
-            <!-- Left Side - Content -->
+             Left Side - Content 
             <div class="left-content">
                 <h1 class="content-heading">
                     Welcome to the<span> Academic <br> Resource</span> Portal
@@ -33,14 +103,21 @@ include 'includes/version.php';
                 </div>
                 <a href="resources.php" class="btn-get-started">Explore Resources</a>
             </div>
-            <!-- Right Side - Image -->
+            Right Side - Image 
             <div class="right-content">
                 <img src="https://saifali.sirv.com/Images/book%20and%20glasses.png" alt="Academic Resources">
             </div>
         </div>
-    </main>
+    </main> -->
+    <div class="hero">
+        <div class="tag">Made by Student, for Students</div>
+        <h1 class="hero-h1">Quality resources shared by the community</h1>
+        <p class="hero-p">Explore and share top educational resources.Discover resources, Events, and Course. Join us to access, contribute, and excel in your academic journey.</p>
+        <a href="resources.php" class="home-cta-button"><span>Get access to  <!--4,958--> resources</span></a>
+    </div>
 
-    <!-- Featured Resources Section -->
+
+    <!-- Featured Resources Section 
     <section class="featured-resources">
         <div class="feature">
             <h2 class="index-head">Featured Resources</h2>
@@ -62,7 +139,7 @@ include 'includes/version.php';
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- How It Works Section -->
     <section class="how-it-works">
@@ -126,7 +203,7 @@ include 'includes/version.php';
                         <li>Attend virtual workshops and webinars</li>
                         <li>Contribute to peer review processes</li>
                     </ul>
-                    <a href="#" class="cta-button" style="padding-top:20px">Join Community</a>
+                    <a href="discussion-forum.php" class="cta-button" style="padding-top:20px">Join Community</a>
                 </div>
                 <div class="community-image">
                     <img src="https://saifali.sirv.com/1up/business/MANIK%20-%20Business%20%26%20Teamwork%20Illustration%20Pack-06.png" alt="Academic community illustration">
@@ -135,7 +212,7 @@ include 'includes/version.php';
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section 
     <section class="testimonials">
         <div class="testi-container">
             <h2 class="index-head">What Our Users Say</h2>
@@ -154,16 +231,16 @@ include 'includes/version.php';
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
-    <!-- Call to Action Section -->
+    <!-- Call to Action Section
     <section class="cta">
         <div class="cta-container">
             <h2 class="index-head">Ready to Elevate Your Academic Journey?</h2>
             <p>Join our community of learners and educators today!</p>
             <a href="signin.php" class="cta-button">Sign Up Now</a>
         </div>
-    </section>
+    </section> -->
 
         <footer>
         <?php include 'includes/footer.php'; ?>

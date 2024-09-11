@@ -45,3 +45,17 @@ document.querySelectorAll('.menu-link').forEach(link => {
         this.closest('.menu-item').classList.add('active');
     });
 });
+
+
+          document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownContent = document.querySelector('.dropdown-content-dash');
+            const dropdownIcon = document.querySelector('.dropdown-icon');
+
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownContent.classList.toggle('show');
+                dropdownIcon.classList.toggle('fa-chevron-down');
+                dropdownIcon.classList.toggle('fa-chevron-up');
+            });
+        });

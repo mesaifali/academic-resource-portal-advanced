@@ -25,6 +25,7 @@
             <div class="category-chip active" data-category="">All Categories</div>
             <div class="category-chip" data-category="general">General</div>
             <div class="category-chip" data-category="resources">Resources</div>
+            <div class="category-chip" data-category="resources">Courses</div>
             <div class="category-chip" data-category="events">Events</div>
             <div class="category-chip" data-category="account">Account</div>
         </div>
@@ -34,7 +35,7 @@
         <div class="faq-item" data-search="what is academic resource portal" data-category="general">
             <input type="checkbox" id="q1">
             <label class="faq-question" for="q1">What is the Academic Resource Portal?</label>
-            <p class="faq-answer">The Academic Resource Portal is an online platform where users can share and download a wide variety of academic resources, such as books, notes, and exam questions. Additionally, the portal now features an "Events" section, offering access to academic-related events like workshops, webinars, and hackathons.</p>
+            <p class="faq-answer">The Academic Resource Portal is an online platform where users can share and download a wide variety of academic resources, such as books, notes, and exam questions. Additionally, the portal now features an "Events" section, offering access to academic-related events like workshops, webinars, and hackathons.Now we have a new "Courses" section where users can enroll and watch educational videos.</p>
         </div>
 
         <div class="faq-item" data-search="is the portal free to use cost" data-category="general">
@@ -92,6 +93,30 @@
             <label class="faq-question" for="q10">Can I download resources without an account?</label>
             <p class="faq-answer">To maintain the quality and security of our portal, we require users to create a free account before downloading resources. This also allows us to provide personalized recommendations and track your downloads.</p>
         </div>
+
+<!-- for course section -->
+      <h2 class="category-header">courses</h2>
+
+        <div class="faq-item" data-search="how can i enroll in courses?" data-category="courses">
+            <input type="checkbox" id="q21">
+            <label class="faq-question" for="21">How can I enroll in courses?</label>
+            <p class="faq-answer">To enroll in a course, simply sign in or register on the portal, navigate to the "Courses" section, and select the course you're interested in. Once enrolled, you can access video content.</p>
+        </div>
+
+        <div class="faq-item" data-search="what are the benefits of the courses section?" data-category="courses">
+            <input type="checkbox" id="q22">
+            <label class="faq-question" for="q22">What are the benefits of the Courses section?</label>
+            <p class="faq-answer">The Courses section offers a structured way to learn with video modules divided into chapters. Users can track their progress, resume courses where they left off, and learn at their own pace.</p>
+        </div>
+
+        <div class="faq-item" data-search="track my course progress?" data-category="courses">
+            <input type="checkbox" id="q23">
+            <label class="faq-question" for="23">Can I track my course progress?</label>
+            <p class="faq-answer">Yes, once you enroll in a course, your progress will be saved. You can continue from where you last left off, and track your progress in your user panel.</p>
+        </div>
+
+<!-- end of course section -->
+
 
         <h2 class="category-header">Events</h2>
 
