@@ -12,16 +12,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $target_dir = "uploads/profile_picture/";
     $target_file = $target_dir . basename($profile_picture);
-    move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $target_file);
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    $file_temp = $_FILES['profile_picture']['tmp_name'];
+    $file_size = $_FILES['profile_picture']['size'];
 
-    $sql = "INSERT INTO users (name, username, email, phone, profile_picture, password) 
-            VALUES ('$name', '$username', '$email', '$phone', '$profile_picture', '$password')";
+    // Validate file type and size
+    $allowed_types = ['jpg', 'jpeg', 'png'];
+    if (in_array($imageFileType, $allowed_types) && $file_size <= 5000000) { // 5MB limit
+        // Check if the uploaded file is an actual image
+        $check = getimagesize($file_temp);
+        if ($check !== false) {
+            if (move_uploaded_file($file_temp, $target_file)) {
+                $sql = "INSERT INTO users (name, username, email, phone, profile_picture, password) 
+                        VALUES ('$name', '$username', '$email', '$phone', '$profile_picture', '$password')";
 
-    if ($conn->query($sql) === TRUE) {
-        header("Location: signin.php");
-        exit();
+                if ($conn->query($sql) === TRUE) {
+                    header("Location: signin.php");
+                    exit();
+                } else {
+                    $error = "Error: " . $sql . "<br>" . $conn->error;
+                }
+            } else {
+                $error = "Sorry, there was an error uploading your file.";
+            }
+        } else {
+            $error = "File is not an image.";
+        }
     } else {
-        $error = "Error: " . $sql . "<br>" . $conn->error;
+        $error = "Only JPG, JPEG, and PNG files are allowed, and the file size must be less than 5MB.";
     }
 }
 
@@ -35,7 +53,6 @@ $conn->close();
     <link rel="stylesheet" href="assets/css/styles.css?v=<?php echo $version; ?>">
     <title>Sign Up - Academic Resource Portal</title>
     <link rel="icon" type="image/jpg" href="https://saifali.sirv.com/favicon/favicon-32x32.png">
-
 </head>
 <body>
     <header>
@@ -62,11 +79,11 @@ $conn->close();
                 </div>
                 <div class="sign-group">
                     <label for="phone">Phone Number:</label>
-                    <input type="text" name="phone" id="phone" placeholder="Phone Number" maxlength="10" required>
+                    <input type="number" name="phone" id="phone" placeholder="Phone Number" maxlength="10" required>
                 </div>
                 <div class="sign-group">
                     <label for="profile_picture">Profile Picture:</label>
-                    <input type="image" name="profile_picture" id="profile_picture" required>
+                    <input type="file" name="profile_picture" id="profile_picture" accept="image/*" required>
                 </div>
                 <div class="sign-group">
                     <label for="password">Password:</label>
@@ -79,4 +96,3 @@ $conn->close();
     </main>
 </body>
 </html>
-
