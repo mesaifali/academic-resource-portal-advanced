@@ -92,6 +92,12 @@ $conn->close();
                 <?php endif; ?>
             </tbody>
         </table>
+
+<form method="get" action="export-event-users.php">
+    <input type="hidden" name="id" value="<?php echo $event_id; ?>">
+    <button type="submit" class="admin-btn">Export Registrations to CSV</button>
+</form>
+
         <a href="manage-events.php" class="dwn-btn">Back to Manage Events</a>
     </div>
     <script src="../assets/admin_sidebar/sidebar.php"></script>
