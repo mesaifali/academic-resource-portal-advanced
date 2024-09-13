@@ -2580,3 +2580,21 @@ padding-top: 20px;
         max-width: 90%;
     }
 }
+
+/* responsive dashboard for user */
+
+ @media (max-width: 768px) {
+.upload-container {
+    background: var(--shadow-color);
+       width: 560px;
+   height:100%;
+    border-radius: 8px;
+    margin: 10px 0 0 12px;
+  padding: 10px 50px 12px 12px;
+}
+
+.mobile-upload{
+    width: 120%;
+}
+
+ }

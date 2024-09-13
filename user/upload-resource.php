@@ -72,7 +72,7 @@ $conn->close();
 <body>
 <?php include '../assets/user_sidebar/sidebar.php'; ?>
 <div class="upload-container">
-    <form action="upload-resource.php" method="POST" enctype="multipart/form-data">
+    <form action="upload-resource.php"  class="mobile-upload" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="title">Resource Title</label>
             <input type="text" id="title" name="title" maxlength="90" placeholder="Resource Title" required>

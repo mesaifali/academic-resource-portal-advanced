@@ -262,3 +262,15 @@ flex-direction: column;
 display: flex;
 padding: 10px 0 0 0;
         }
+/* Hide graph section on mobile devices */
+@media (max-width: 768px) {
+    .graph-section,
+    .graph-container {
+        display: none;
+    }
+
+    .main-content {
+    flex: 1;
+    padding: 0px;
+}
+}
