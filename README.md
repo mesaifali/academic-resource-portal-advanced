@@ -28,6 +28,6 @@ Admin usecase:
 - amdin can see total registerd user in events
 
 in future update....
-- like community forum
+- like community forum--done
 - and many more
   
