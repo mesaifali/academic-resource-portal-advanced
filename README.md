@@ -4,7 +4,7 @@ yes, All the thing from php, css, js and sql everything is Pure AI(ChatGpt, Clau
 
 <h3>Note: Website dashboard are not fully responsive as of now</h3>
 
-Demo: http://noteshare.free.nf/
+Demo: https://academicresource.free.nf/
 
 User usecase:
 - user can sign-in/sign-up
