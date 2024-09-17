@@ -122,7 +122,7 @@ $conn->close();
             </div>
             <div class="form-group">
                 <label for="thumbnail">Upload New Thumbnail <!--(optional)--></label>
-                <input type="file" id="thumbnail" name="thumbnail">
+                <input type="image" id="thumbnail" name="thumbnail">
             </div>
             <button type="submit" class="dash-btn">Update Event</button>
         </form>

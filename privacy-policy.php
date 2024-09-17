@@ -63,7 +63,7 @@ include 'includes/version.php';
     <p>We may update this policy periodically. We will notify you of any significant changes via email or through our platform.</p>
 
     <h2 class="policy-terms">7. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at privacy@academicresourceportal.com.</p>
+    <p>If you have any questions about this Privacy Policy, please contact us at help.academicresources@gmail.com.</p>
 </main>
     <footer>
         <?php include 'includes/footer.php'; ?>

@@ -49,10 +49,8 @@ $conn->close();
 <body>
     <?php include '../assets/admin_sidebar/sidebar.php'; ?>
     <div class="dashboard-container">
+<h2 onclick="history.back()"><i class="fa-solid fa-arrow-left"></i><a href="#">Event Registrations</a></h2>
      <div class="manage-event-section">  
-       
-        <h2>Event Registrations</h2>
-        
         <div class="event-details-section">
         <h3 style="color:#FFDE21;"> Overview </h3>
         <hr class="dashed">
@@ -97,8 +95,6 @@ $conn->close();
     <input type="hidden" name="id" value="<?php echo $event_id; ?>">
     <button type="submit" class="admin-btn">Export Registrations to CSV</button>
 </form>
-
-        <a href="manage-events.php" class="dwn-btn">Back to Manage Events</a>
     </div>
     <script src="../assets/admin_sidebar/sidebar.php"></script>
 </body>

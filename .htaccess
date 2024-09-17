@@ -4,3 +4,4 @@ ErrorDocument 503 /error.php
 ErrorDocument 500 /error.php
 ErrorDocument 401 /error.php
 ErrorDocument 403 /error.php
+Redirect 301 /index.php https://academicresource.free.nf/

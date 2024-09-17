@@ -22,6 +22,74 @@ $user = $result->fetch_assoc();
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+  <style>
+    body {
+        padding-bottom: 60px; /* Adjust based on the height of your navbar */
+    }
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: rgb(41, 45, 50);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .nav-item i {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .nav-item span {
+        font-size: 12px;
+    }
+
+    .nav-item::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgb(89, 95, 247);
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    .nav-item.active {
+        color: rgb(89, 95, 247);
+    }
+
+    .nav-item.active::before {
+        opacity: 0.2;
+        top: -10px;
+    }
+
+    @media (min-width: 769px) {
+        .bottom-navbar {
+            display: none;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -106,6 +174,49 @@ this is for overview shows on dashbaord
         </div>
     </div> -->
     
+<!-- buttom nav bar -->
+    <nav class="bottom-navbar">
+        <a href="../user/dashboard.php" class="nav-item" data-page="dashboard">
+            <i class="ri-layout-masonry-fill"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="../user/upload-resource.php" class="nav-item" data-page="upload">
+            <i class="ri-upload-cloud-2-line"></i>
+            <span>Upload</span>
+        </a>
+        <a href="../user/manage-events.php" class="nav-item" data-page="manage">
+           <i class="fa-regular fa-calendar"></i>
+            <span>Events</span>
+        </a>
+        <a href="../user/my_courses.php" class="nav-item" data-page="courses">
+            <i class="ri-folder-video-line"></i>
+            <span>Courses</span>
+        </a>
+
+       <a href="../user/view-account.php" class="nav-item" data-page="courses">
+<i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav-item');
+        const currentPath = window.location.pathname;
+
+        navItems.forEach(item => {
+            const itemPath = new URL(item.getAttribute('href'), window.location.origin).pathname;
+            if (currentPath === itemPath) {
+                item.classList.add('active');
+            }
+
+            item.addEventListener('click', function(e) {
+                navItems.forEach(navItem => navItem.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 
     <script src="sidebar.js"></script>
 </body>

@@ -12,7 +12,6 @@ include 'includes/version.php';
 <link rel="icon" type="image/jpg" href="https://saifali.sirv.com/favicon/favicon-32x32.png">
 
     <title>Academic Resource Portal</title>
-    <script src="//code.tidio.co/lnyjageljxyuxvgexte5odsbsuzoajyx.js" async></script>
 
    <style>
         /* body, html {
@@ -81,6 +80,45 @@ include 'includes/version.php';
             background-color: rgba(0, 0, 0, 0.8);
     
         }
+
+
+/* Demo Popup Styling */
+.demo-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent backdrop */
+  z-index: 1000; /* Ensure popup is on top */
+}
+
+.popup-content-home {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative; 
+  max-width: 80%; /* Adjust as needed */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #888; 
+}
+
+.close-btn:hover {
+  color: #333; 
+}
+
+
     </style>
 
 </head>
@@ -88,6 +126,17 @@ include 'includes/version.php';
     <header>
      <?php include 'includes/header.php'; ?>
     </header>
+
+
+<div class="demo-popup" id="demoPopup">
+    <div class="popup-content-home">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>This is a Under Construction Version</h2>
+      <img src='https://www.usea.edu.kh/under_construction/Under.jpg'>
+      <p>Please note that some Context may be limited. </p>
+    </div>
+  </div>
+
     <!-- <main>
         <div class="container">
              Left Side - Content 
@@ -141,7 +190,7 @@ include 'includes/version.php';
         </div>
     </section> -->
 
-    <!-- How It Works Section -->
+    <!-- How It Works Section
     <section class="how-it-works">
         <div class="how-it">
             <h2 class="index-head">How It Works</h2>
@@ -163,7 +212,45 @@ include 'includes/version.php';
                 </div>
             </div>
         </div>
-    </section>
+    </section>  -->
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <div class="how-it">
+        <div class="header-container">
+            <div class="tag">OUR STREAMLINED APPROACH</div>
+            <h2 class="how-head">How It Works</h2>
+        </div>
+        <p class="subtitle">Simplify your academic journey with our efficient three-step process</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-icon">
+                    <img src="https://saifali.sirv.com/1up/business/MANIK%20-%20Business%20%26%20Teamwork%20Illustration%20Pack-06.png" alt="Sign Up">
+                </div>
+                <h3>Sign Up</h3>
+                <p>Create your free account to get started and unlock a world of academic resources.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <img src="https://saifali.sirv.com/1up/business/MANIK%20-%20Business%20%26%20Teamwork%20Illustration%20Pack-06.png" alt="Browse Resources">
+                </div>
+                <h3>Browse Resources</h3>
+                <p>Explore our vast library of academic materials tailored to your needs.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <img src="https://saifali.sirv.com/1up/business/MANIK%20-%20Business%20%26%20Teamwork%20Illustration%20Pack-06.png" alt="Download or Share">
+                </div>
+                <h3>Download or Share</h3>
+                <p>Access resources instantly or contribute your own to help fellow students.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 
     <!-- Statistics Section -->
     <section class="statistics">
@@ -245,5 +332,13 @@ include 'includes/version.php';
         <footer>
         <?php include 'includes/footer.php'; ?>
     </footer>
+
+
+    <script>
+// Close Popup Function
+function closePopup() {
+  document.getElementById("demoPopup").style.display = "none";
+}
+    </script>
 </body>
 </html>

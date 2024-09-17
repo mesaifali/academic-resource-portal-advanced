@@ -18,10 +18,10 @@
           <h4>Academic Resources</h4>
             <ul class="links">
            <p>Our portal is designed to provide students,educators, and researchers with the best academic resources available.</p><br>
-           <a style= 'color:#fff' href="mailto:academic@gmail.com">Email: academic@gmail.com</a>
+           <a style= 'color:#fff' href="mailto:help.academicresources@gmail.com">Email: help.academicresources@gmail.com</a>
 
           <div class="icons">
-            <i class="fa-brands fa-facebook-f"></i>
+            <a href="https://www.facebook.com/profile.php?id=61565486648336&sk"> <i class="fa-brands fa-facebook-f"></i> </a>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-github"></i>
@@ -73,7 +73,7 @@
           <h4>I Care</h4>
           <ul class="links">
           <li><a href="../results.php">Result</a></li>
-            <li><a href="../discussion-forum.php">Discussion Forum</a></li> -->
+            <li><a href="../discussion-forum.php">Discussion Forum</a></li>
           <!-- <li><a href="../privacy-policy.php">Privacy Policy</a></li> -->
           </ul>
         </div>
@@ -90,7 +90,7 @@
   <div class="footer-col">
           <h4>Tools</h4>
           <ul class="links">
-            <li><a href="">tool1</a></li>
+            <li><a href="../letter.php">Quick Letter Generator</a></li>
             <li><a href="">tool2</a></li>
              <li><a href="">tool3</a></li>
           </ul>

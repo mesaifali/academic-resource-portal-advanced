@@ -60,6 +60,9 @@ $conn->close();
                 <?php } ?>
             </tbody>
         </table>
+        <form method="get" action="export-users.php">
+            <button type="submit" class="admin-btn">Export Users to CSV</button>
+        </form>
     </div>
 <script src="../assets/user_sidebar/sidebar.js"></script>
 </body>

@@ -340,7 +340,10 @@ button:disabled, .button:disabled {
     }
 
     .dashboard-container {
-        padding: 15px;
+      padding: 0;
+    overflow-x: scroll;
+    background: none;
+    box-shadow: none;
     }
 }
 
@@ -473,6 +476,7 @@ button.button:hover {
 
 
 /* Form Container Styles */
+
 .form-container {
     background: var(--shadow-color);
     width: 550px;
@@ -1578,8 +1582,10 @@ display: flex;
     }
 
     .tag {
-        background-color: #e1f5fe;
-        color: #0277bd;
+        /* background-color: #e1f5fe;
+        color: #0277bd; */
+        background-color: #ffa700;
+  color: #663f1d;
         padding: 5px 15px;
         border-radius: 20px;
         display: inline-block;
@@ -2581,20 +2587,155 @@ padding-top: 20px;
     }
 }
 
+/* quick letter generator */
+
+
+
+.ql-container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-gray);
+    color: var(--color-dark-gray);
+}
+
+.ql-title {
+    color: var(--color-dark-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ql-form, .ql-letter-preview {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.ql-form-group {
+    margin-bottom: 1rem;
+}
+
+.ql-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark-blue);
+}
+
+.ql-input,
+.ql-textarea,
+.ql-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+
+.ql-textarea {
+    resize: vertical;
+}
+
+.ql-button {
+    background-color: var(--color-bright-blue);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.ql-button:hover {
+    background-color: var(--color-light-blue);
+}
+
+.ql-letter {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+}
+
+.ql-letter p {
+    margin-bottom: 1rem;
+}
+
+.ql-letter-body {
+    margin-top: 2rem;
+    white-space: pre-wrap;
+}
+
+.ql-button-group {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+    body {
+        margin: 1.6cm;
+    }
+    .ql-screen-only {
+        display: none !important;
+    }
+    .ql-letter-preview {
+        box-shadow: none;
+        padding: 0;
+    }
+    .ql-letter {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 768px) {
+    .ql-container {
+        padding: 1rem;
+    }
+    
+    /* .ql-form, .ql-letter-preview {
+        padding: 1rem;
+    } */
+}
+
+/* end of quick letter generator */
+
+
 /* responsive dashboard for user */
 
  @media (max-width: 768px) {
 .upload-container {
-    background: var(--shadow-color);
-       width: 560px;
+width: 375px;
    height:100%;
     border-radius: 8px;
-    margin: 10px 0 0 12px;
-  padding: 10px 50px 12px 12px;
+    margin: 0;
+    padding: 6px 0px 0px 16px;
+  background: none;
 }
 
-.mobile-upload{
-    width: 120%;
+.dash-btn {
+    width: 95%;
+
 }
+.mobile-upload{
+    width: 100%;
+}
+.form-container{
+background: none;
+  width: 550px;
+  height: 100%;
+  border-radius: 8px;
+  margin: 0;
+padding: 24px 0 0 12px;
+    box-shadow: none;
+  }
+
 
  }

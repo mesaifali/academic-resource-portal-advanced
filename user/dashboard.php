@@ -88,6 +88,7 @@ $questions = $type_data['questions'];
             <canvas id="categoryChart"></canvas>
         </div>
 </div>
+<p style="text-align: center;color: #5e5e60;font-size: x-large; padding-top: 60px;"> use desktop for better experience </p>
     </div>
 <script>
 // First Pie Chart: Approved vs Rejected vs Pending

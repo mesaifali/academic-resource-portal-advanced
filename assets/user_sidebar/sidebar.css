@@ -199,6 +199,9 @@ body {
   flex-direction: column;
     }
 
+.sidebar{
+    display: none;
+}
     /* .sidebar {
         position: fixed;
         z-index: 100;
@@ -209,14 +212,17 @@ body {
     } */
 
     .sidebar.active {
+        display: none;
         transform: translateX(0);
     }
 
     .header {
+        display: none;
         justify-content: space-between;
     }
 
     .sidebar-toggle {
+        display: none;
         left: 20px; /* Adjust left side padding in small screen */
 
     }
@@ -262,15 +268,13 @@ flex-direction: column;
 display: flex;
 padding: 10px 0 0 0;
         }
+
 /* Hide graph section on mobile devices */
 @media (max-width: 768px) {
     .graph-section,
     .graph-container {
         display: none;
     }
+}
 
-    .main-content {
-    flex: 1;
-    padding: 0px;
-}
-}
+/* for buttom navbar */

@@ -59,7 +59,7 @@ include 'includes/version.php';
     <p>We reserve the right to modify these Terms and Conditions at any time. We will notify users of any significant changes.</p>
 
     <h2 class="policy-terms">11. Contact Information</h2>
-    <p>If you have any questions about these Terms and Conditions, please contact us at legal@academicresourceportal.com.</p>
+    <p>If you have any questions about these Terms and Conditions, please contact us at help.academicresources@gmail.com.</p>
 </main>
 
     <footer>
