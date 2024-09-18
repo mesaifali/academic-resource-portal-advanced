@@ -153,7 +153,7 @@ background: #fff;
         <div class="ip-display"><?php echo $userIP; ?></div>
 
         <h2>IP Details</h2>
-        <div class="details">
+        <div class="ip-details">
             <div class="ip-detail-item"><strong>ISP:</strong> <?php echo $details['org'] ?? 'N/A'; ?></div>
             <div class="ip-detail-item"><strong>IP Type:</strong> <?php echo htmlspecialchars($ipType); ?></div>
             <div class="ip-detail-item"><strong>Country:</strong> <?php echo $details['country_name'] ?? 'N/A'; ?></div>
