@@ -91,7 +91,7 @@
           <h4>Tools</h4>
           <ul class="links">
             <li><a href="../letter.php">Quick Letter Generator</a></li>
-            <li><a href="">tool2</a></li>
+            <li><a href="../ip-insight.php">IP Insight</a></li>
              <li><a href="">tool3</a></li>
           </ul>
         </div>
