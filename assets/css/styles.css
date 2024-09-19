@@ -1585,7 +1585,7 @@ display: flex;
         /* background-color: #e1f5fe;
         color: #0277bd; */
         background-color: #ffa700;
-  color: #663f1d;
+  color: #fff;
         padding: 5px 15px;
         border-radius: 20px;
         display: inline-block;
@@ -1670,6 +1670,9 @@ display: flex;
         .subtitle {
             font-size: 16px;
         }
+        .sign-container {
+width: 340px;
+}
     }
 
     @media (max-width: 480px) {
@@ -2736,6 +2739,17 @@ background: none;
 padding: 24px 0 0 12px;
     box-shadow: none;
   }
-
-
  }
+
+#password-criteria {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+#password-criteria p {
+    margin: 5px 0;
+}
+
+#password-criteria span {
+    margin-right: 5px;
+}
